@@ -8,6 +8,7 @@ from selenium.webdriver.support import expected_conditions as EC
 @pytest.fixture(autouse=True)
 def testing():
    pytest.driver = webdriver.Chrome('/tests/chromedriver.exe')
+   pytest.driver.set_window_size(800, 600)
 # Переходим на страницу авторизации
    pytest.driver.get('http://petfriends.skillfactory.ru/login')
 

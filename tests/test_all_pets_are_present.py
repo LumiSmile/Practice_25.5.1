@@ -5,10 +5,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 
 def test_all_pets_are_present(go_to_my_pets):
-    pytest.driver.maximize_window()
-
-    while not pytest.driver.find_elements():
-        sleep(10)
     '''Проверка того, что на странице со списком моих питомцев присутствуют все питомцы'''
 
     element = WebDriverWait(pytest.driver, 10).until(
